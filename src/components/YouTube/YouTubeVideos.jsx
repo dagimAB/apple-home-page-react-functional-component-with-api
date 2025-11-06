@@ -1,17 +1,21 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 function YouTubeVideos() {
+  
   const [youTubeVideos, setYouTubeVideos] = useState([]);
+
+  const apiKey = import.meta.env.VITE_EVANGADI_API_KEY;
 
   useEffect(() => {
     fetch(
-      "https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCxA7AzkI2Sndf8S1G5rSkwQ&maxResults=5&order=date&key=AIzaSyDvFfXkI13YSywDLiCAe4W6GoPOhipr6Nc"
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCxA7AzkI2Sndf8S1G5rSkwQ&maxResults=6&order=date&key=${apiKey}`
     )
       .then((res) => res.json())
       .then((data) => {
         setYouTubeVideos(data.items);
       });
   }, []);
+
 
   return (
     <div className="videosWrapper">
@@ -21,11 +25,10 @@ function YouTubeVideos() {
             <div className="col-12">
               <div className="tittle-wrapper">
                 <br />
-                <h1>Latest video</h1>
+                <h1>Latest Evangadi videos</h1>
                 <br />
               </div>
             </div>
-
             {youTubeVideos?.map((singleVideo, i) => {
               let vidId = singleVideo.id.videoId;
               let vidLink = `https://youtube.com/watch?v=${vidId}`;
@@ -40,7 +43,6 @@ function YouTubeVideos() {
                         />
                       </a>
                     </div>
-
                     <div className="videoInfoWrapper">
                       <div className="videoTitle">
                         <a href={vidLink} target="_blank" rel="noreferrer">

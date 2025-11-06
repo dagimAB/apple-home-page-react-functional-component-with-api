@@ -1,5 +1,5 @@
 Apple Home Page (React Functional Component)
-A faithful recreation of Apple's home page built with React functional components — focused on layout, responsiveness, and modern CSS. This project is an educational reimplementation and is not affiliated with or endorsed by Apple Inc.
+A faithful recreation of Apple's home page built with React functional components using api key for fetching youtube video — focused on layout, responsiveness, and modern CSS. This project is an educational reimplementation and is not affiliated with or endorsed by Apple Inc.
 
 
 Features
@@ -24,16 +24,9 @@ or
 yarn
 Run locally
 
-Start the dev server: npm start
-or
-yarn start
-Open http://localhost:3000
-Build
+Start the dev server: npm run dev
 
 Create a production build: npm run build
-or
-yarn build
-Deploy
 
 The build output in /build can be deployed to GitHub Pages, Netlify, Vercel, etc.
 Example for GitHub Pages: use gh-pages or a static hosting setup.

@@ -11,6 +11,7 @@ import FourthSection from './components/FourthSection.jsx'
 import FifthSection from './components/FifthSection.jsx'
 import SixthSection from './components/SixthSection.jsx'
 import YouTubeVideos from './components/YouTube/YouTubeVideos.jsx'
+import AppleYouTubeVideos from './components/YouTube/AppleYouTubeVideos.jsx'
 function App() {
 
   return (
@@ -24,6 +25,7 @@ function App() {
       <FifthSection/>
       <SixthSection/>
       <YouTubeVideos />
+      <AppleYouTubeVideos/>
       <Footer />
     </>
   );
